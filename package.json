@@ -1,0 +1,44 @@
+{
+  "name": "apprise-me",
+  "version": "0.0.1",
+  "description": "A CLI program to provide the user with a useless fact",
+  "main": "./dist/apprise-me.js",
+  "bin":   "./dist/apprise-me",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasGroenbek/apprise-me.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc && cp ./lib/apprise-me ./dist/apprise-me && chmod +x ./dist/apprise-me",
+    "format": "prettier --write \"lib/**/*.ts\" \"test/**/*.ts\"",
+    "start": "npm run build && ./dist/apprise-me",
+    "lint": "eslint \"{lib,apps,libs,test}/**/*.ts\" --fix"
+  },
+  "author": "Jonas Grønbek",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chalk-animation": "^1.6.1",
+    "@types/figlet": "^1.5.5",
+    "@types/gradient-string": "^1.1.2",
+    "@types/inquirer": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "gradient-string": "^2.0.1",
+    "nanospinner": "^1.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "commander": "^9.4.0"
+  }
+}
